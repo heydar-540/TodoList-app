@@ -1,0 +1,154 @@
+@import url("./assetes/fonts.css");
+
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "iranyekan";
+    list-style: none;
+}
+html {
+    font-size: 62.5%;
+}
+/* variables */
+
+:root{
+    --primaryColor: #6d28d9;
+    --seconderyColor: #ede9fd;
+    --minWhite: #fff;
+    --mainBlack: #222;
+    --mainGray: #7c7c7c;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+body{
+    font-family: "iranyekan";
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container{
+    display: flex;
+}
+.todo-container{
+    width: 25rem;
+}
+
+form {
+    width: 25rem;
+    background-color: var(--minWhite);
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    flex: 1;
+}
+
+form input,button{
+    border: none;
+    outline: none;
+    background-color: var(--minWhite);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+form button{
+    color: var(--primaryColor);
+    cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+form button:hover{
+    background-color: var(--primaryColor);
+    color: var(--minWhite);
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--seconderyColor);
+    
+}
+
+.todo li {
+    flex: 1;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.tdod span{
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+
+
+.fa-trash-can {
+    color: var(--mainRed);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.fa-square-check{
+    color: var(--primaryColor);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+select{
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    color: var(--primaryColor);
+}
+.select{
+    margin-left: 1rem;
+    background-color: var(--minWhite);
+    cursor: pointer;
+    width: 10rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: var(--primaryColor);
+    pointer-events: none;
+}
